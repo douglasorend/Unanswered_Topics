@@ -1,3 +1,6 @@
+v1.4 - March 27th, 2016
+o Second attempt to fix array processing issue found by [url=http://www.simplemachines.org/community/index.php?action=profile;u=189089]Inti31[/url].
+
 v1.3 - March 19th, 2016
 o Fixed "Array to string conversion" error found by [url=http://www.simplemachines.org/community/index.php?action=profile;u=423124]roza[/url].
 o Fixed array processing issue found by [url=http://www.simplemachines.org/community/index.php?action=profile;u=189089]Inti31[/url].
