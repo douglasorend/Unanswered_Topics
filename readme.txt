@@ -1,22 +1,19 @@
 [hr]
-[center][color=red][size=16pt][b]UNANSWERED TOPICS v1.7[/b][/size][/color]
+[center][color=red][size=16pt][b]UNANSWERED TOPICS v2.0[/b][/size][/color]
 [url=http://www.simplemachines.org/community/index.php?action=profile;u=253913][b]By Dougiefresh[/b][/url] -> [url=http://custom.simplemachines.org/mods/index.php?mod=4088]Link to Mod[/url]
 [/center]
 [hr]
 
 [color=blue][b][size=12pt][u]Introduction[/u][/size][/b][/color]
-This mod shows all of the topics, excluding locked topics, that have not been answered (aka topics that consist of a single post).  Locked topics are not included in the list because it makes no sense to include topics that can't be replied to....
+This mod shows all of the topics, excluding locked topics and recycle board topics, that have not been answered (aka topics that consist of a single post).  Locked topics and topics in the recycle boards are not included in the list because it makes no sense to include topics that can't be replied to....
 
 [color=blue][b][size=12pt][u]Admin Settings[/u][/size][/b][/color]
 There are two new settings under [b]Admin[/b] -> [b]Configuration[/b] -> [b]Modification Settings[/b]:
 o Default view for unanswered topics (set to posts view by default)
 o Number of days to show unanswered topics (set to 90 days by default)
 
-[color=blue][b][size=12pt][u]Coding Credits[/u][/size][/b][/color]
-Most of the [url=http://www.simplemachines.org/community/index.php?topic=510124.msg3601208#msg3601208]code contained within this mod[/url] was written by the combined effort of [url=http://www.simplemachines.org/community/index.php?action=profile;u=41895]margarett[/url], [url=http://www.simplemachines.org/community/index.php?action=profile;u=378334]Phphelp[/url] and [url=http://www.simplemachines.org/community/index.php?action=profile;u=318771]Arantor[/url].....
-
 [color=blue][b][size=12pt][u]Compatibility Notes[/u][/size][/b][/color]
-This mod was tested on SMF 2.0.11 and SMF 2.1 Beta 2, but should work on SMF 2.0 and up.  SMF 1.x is not and will not be supported.  
+This mod was tested on SMF 2.0.13 and SMF 2.1 Beta 2, but should work on SMF 2.0 and up.  SMF 1.x is not and will not be supported.
 
 [color=blue][b][size=12pt][u]Related Discussions[/u][/size][/b][/color]
 o [url=http://www.simplemachines.org/community/index.php?topic=510124.0[/url]Un-answeredTopics for SMF 2.0?[/url]
@@ -25,7 +22,7 @@ o [url=http://www.simplemachines.org/community/index.php?topic=510124.0[/url]Un-
 The changelog has been removed and can be seen at [url=http://www.xptsp.com/board/index.php?topic=664.msg980#msg980]XPtsp.com[/url].
 
 [color=blue][b][size=12pt][u]License[/u][/size][/b][/color]
-Copyright (c) 2016, Douglas Orend
+Copyright (c) 2016 - 2017, Douglas Orend
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:

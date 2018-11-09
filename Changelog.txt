@@ -1,3 +1,11 @@
+v2.0 - January 5th, 2017
+o Converted mod to 100% hook-based, removing all file edits!
+o Completely rewrote unanswered topics function to use built-in list functionality.
+o Moved all language strings to individual language files.
+o Added code to exclude contents of the recycle board from the list.
+o Added checkboxes to remove topics, when appropriate permissions are granted to user.
+o Added code to restrict unanswered topics to selected member, if desirable.
+
 v1.7 - October 1st, 2016
 o Fixed a bug where posts where displayed instead of topics on page 2 and up...  Thanks, [url=http://www.simplemachines.org/community/index.php?action=profile;u=413177]aegersz[/url]!
 

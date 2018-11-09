@@ -5,47 +5,55 @@
 	<id>Dougiefresh:UnansweredTopics</id>
 	<name>Unanswered Topics</name>
 	<type>modification</type>
-	<version>1.7</version>
+	<version>2.0</version>
 
 	<install for="2.0 - 2.0.99">
 		<readme parsebbc="true">readme.txt</readme>
-		<code>settings_install.php</code>
-		<modification>install_20x.xml</modification>
-		<modification>language_english.xml</modification>
-		<modification>language_german.xml</modification>
-		<modification>language_spanish_latin.xml</modification>
-		<modification>language_turkish.xml</modification>
+		<code>add_remove_hooks.php</code>
+		<require-file name="Subs-Unanswered.php" destination="$sourcedir" />
 		<require-file name="Unanswered.php" destination="$sourcedir" />
-		<require-file name="Unanswered20.template.php" destination="$themedir" />
+		<require-file name="Unanswered.english.php" destination="$languagedir" />
+		<require-file name="Unanswered.german.php" destination="$languagedir" />
+		<require-file name="Unanswered.german-utf8.php" destination="$languagedir" />
+		<require-file name="Unanswered.spanish_latin.php" destination="$languagedir" />
+		<require-file name="Unanswered.spanish_latin-utf8.php" destination="$languagedir" />
+		<require-file name="Unanswered.turkish.php" destination="$languagedir" />
+		<require-file name="Unanswered.turkish-utf8.php" destination="$languagedir" />
 	</install>
 	<uninstall for="2.0 - 2.0.99">
-		<modification reverse="true">install_20x.xml</modification>
-		<modification reverse="true">language_english.xml</modification>
-		<modification reverse="true">language_german.xml</modification>
-		<modification reverse="true">language_spanish_latin.xml</modification>
-		<modification reverse="true">language_turkish.xml</modification>
+		<remove-file name="$sourcedir/Subs-Unanswered.php" />
 		<remove-file name="$sourcedir/Unanswered.php" />
-		<remove-file name="$themedir/Unanswered20.template.php" />
+		<remove-file name="$languagedir/Unanswered.english.php" />
+		<remove-file name="$languagedir/Unanswered.german.php" />
+		<remove-file name="$languagedir/Unanswered.german-utf8.php" />
+		<remove-file name="$languagedir/Unanswered.spanish_latin.php" />
+		<remove-file name="$languagedir/Unanswered.spanish_latin-utf8.php" />
+		<remove-file name="$languagedir/Unanswered.turkish.php" />
+		<remove-file name="$languagedir/Unanswered.turkish-utf8.php" />
 	</uninstall>
 
 	<install for="2.1 Beta 2">
 		<readme parsebbc="true">readme.txt</readme>
 		<code>settings_install.php</code>
-		<modification>install_21x.xml</modification>
-		<modification>language_english.xml</modification>
-		<modification>language_german.xml</modification>
-		<modification>language_spanish_latin.xml</modification>
-		<modification>language_turkish.xml</modification>
+		<require-file name="Subs-Unanswered.php" destination="$sourcedir" />
 		<require-file name="Unanswered.php" destination="$sourcedir" />
-		<require-file name="Unanswered21.template.php" destination="$themedir" />
+		<require-file name="Unanswered.english.php" destination="$languagedir" />
+		<require-file name="Unanswered.german.php" destination="$languagedir" />
+		<require-file name="Unanswered.german-utf8.php" destination="$languagedir" />
+		<require-file name="Unanswered.spanish_latin.php" destination="$languagedir" />
+		<require-file name="Unanswered.spanish_latin-utf8.php" destination="$languagedir" />
+		<require-file name="Unanswered.turkish.php" destination="$languagedir" />
+		<require-file name="Unanswered.turkish-utf8.php" destination="$languagedir" />
 	</install>
 	<uninstall for="2.1 Beta 2">
-		<modification reverse="true">install_21x.xml</modification>
-		<modification reverse="true">language_english.xml</modification>
-		<modification reverse="true">language_german.xml</modification>
-		<modification reverse="true">language_spanish_latin.xml</modification>
-		<modification reverse="true">language_turkish.xml</modification>
+		<remove-file name="$sourcedir/Subs-Unanswered.php" />
 		<remove-file name="$sourcedir/Unanswered.php" />
-		<remove-file name="$themedir/Unanswered21.template.php" />
+		<remove-file name="$languagedir/Unanswered.english.php" />
+		<remove-file name="$languagedir/Unanswered.german.php" />
+		<remove-file name="$languagedir/Unanswered.german-utf8.php" />
+		<remove-file name="$languagedir/Unanswered.spanish_latin.php" />
+		<remove-file name="$languagedir/Unanswered.spanish_latin-utf8.php" />
+		<remove-file name="$languagedir/Unanswered.turkish.php" />
+		<remove-file name="$languagedir/Unanswered.turkish-utf8.php" />
 	</uninstall>
 </package-info>
