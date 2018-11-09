@@ -1,11 +1,16 @@
 [hr]
-[center][color=red][size=16pt][b]UNANSWERED TOPICS v1.0[/b][/size][/color]
+[center][color=red][size=16pt][b]UNANSWERED TOPICS v1.1[/b][/size][/color]
 [url=http://www.simplemachines.org/community/index.php?action=profile;u=253913][b]By Dougiefresh[/b][/url] -> [url=http://custom.simplemachines.org/mods/index.php?mod=4088]Link to Mod[/url]
 [/center]
 [hr]
 
 [color=blue][b][size=12pt][u]Introduction[/u][/size][/b][/color]
 This mod shows all of the topics, excluding locked topics, that have not been answered (aka topics that consist of a single post).  Locked topics are not included in the list because it makes no sense to include topics that can't be replied to....
+
+[color=blue][b][size=12pt][u]Admin Settings[/u][/size][/b][/color]
+There are two new settings under [b]Admin[/b] -> [b]Configuration[/b] -> [b]Modification Settings[/b]:
+o Default view for unanswered topics (set to posts view by default)
+o Number of days to show unanswered topics (set to 90 days by default)
 
 [color=blue][b][size=12pt][u]Coding Credits[/u][/size][/b][/color]
 Most of the [url=http://www.simplemachines.org/community/index.php?topic=510124.msg3601208#msg3601208]code contained within this mod[/url] was written by the combined effort of [url=http://www.simplemachines.org/community/index.php?action=profile;u=41895]margarett[/url], [url=http://www.simplemachines.org/community/index.php?action=profile;u=378334]Phphelp[/url] and [url=http://www.simplemachines.org/community/index.php?action=profile;u=318771]Arantor[/url].....

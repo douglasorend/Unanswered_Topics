@@ -1,2 +1,10 @@
+v1.1 - February 29th, 2016
+o Added option to set number of days for unanswered topics under [b]Modification Settings[/b].
+o Added option to set default view of the unanswered topics (topic or post).
+o Added code to show unanswered topics as a topic list.
+o Added buttons to switch between the two views: topic and post.
+o Removed code that stops users from limiting search to boards and/or categories.
+o Enabled all buttons to be shown (permissions permitting) when viewing the posts.
+
 v1.0 - February 27th, 2016
 o Initial release to the public
