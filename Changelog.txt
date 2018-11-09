@@ -1,3 +1,9 @@
+v1.6 - September 30th, 2016
+o Fixed German language file so that it installs properly without errors.
+
+v1.5 - Match 30th, 2016
+o Added Spanish-Latin translation by [url=http://www.simplemachines.org/community/index.php?action=profile;u=322597]Rock Lee [BC][/url].
+
 v1.4 - March 27th, 2016
 o Second attempt to fix array processing issue found by [url=http://www.simplemachines.org/community/index.php?action=profile;u=189089]Inti31[/url].
 

@@ -3,9 +3,9 @@
 <modification xmlns="http://www.simplemachines.org/xml/modification" xmlns:smf="http://www.simplemachines.org/">
 <id>Dougiefresh:UnansweredTopics</id>
 <name>Unanswered Topics</name>
-<version>1.5</version>
+<version>1.6</version>
 
-<file name="$languagedir/index.german.php">
+<file name="$languagedir/index.german.php" error="skip">
 	<operation>
 		<search position="end" />
 		<add><![CDATA[
@@ -19,7 +19,7 @@ $txt['unanswered_view_posts'] = 'Zeige Beitr&auml;ge';
 	</operation>
 </file>
 
-<file name="$languagedir/index.german-utf8.php">
+<file name="$languagedir/index.german-utf8.php" error="skip">
 	<operation>
 		<search position="end" />
 		<add><![CDATA[
@@ -33,7 +33,7 @@ $txt['unanswered_view_posts'] = 'Zeige Beitr&auml;ge';
 	</operation>
 </file>
 
-<file name="$languagedir/ManageSettings.german.php">
+<file name="$languagedir/ManageSettings.german.php" error="skip">
 	<operation>
 		<search position="end" />
 		<add><![CDATA[
@@ -43,7 +43,7 @@ $txt['unanswered_default_view'] = 'Standardanzeige f&uuml;r unbeantwortete Theme
 	</operation>
 </file>
 
-<file name="$languagedir/ManageSettings.german-utf8.php">
+<file name="$languagedir/ManageSettings.german-utf8.php" error="skip">
 	<operation>
 		<search position="end" />
 		<add><![CDATA[
