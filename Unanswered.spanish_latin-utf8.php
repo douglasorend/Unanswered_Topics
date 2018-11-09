@@ -15,9 +15,9 @@ $txt['show_unanswered_topics_limit'] = 'Mostrar temas sin respuesta en los últim
 $txt['unanswered_topics_visit_none'] = 'No hay temas sin respuesta que se encuentren en los últimos %d días.';
 $txt['unanswered_view_topics'] = 'Ver como Temas';
 $txt['unanswered_view_posts'] = 'Ver como Mensajes';
-$txt['unanswered_time_limit'] = 'Número de días para mostrar los temas sin respuesta:<div class="smalltext">(0 para desactivar)</div>';
 $txt['unanswered_default_view'] = 'Vista predeterminada de temas sin respuesta:';
 //$txt['unanswered_remove_topics'] = 'Remove selected topics?';
-//$txt['unanswered_unread_topics'] = 'Mark selected topics as read?';
+//$txt['unanswered_topics_visit_unlimited'] = 'No unanswered topics found.';
+//$txt['unanswered_time_limit'] = 'Number of days to show unanswered topics:<div class="smalltext">(0 for unlimited time)</div>';
 
 ?>

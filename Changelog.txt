@@ -1,3 +1,11 @@
+v2.1 - January 7th, 2017
+o Fixed text display issue when number of days is equal to 0 in several places.
+o Removed unused topic/post option leftover from version 1.x series.
+o Changed several language strings to reflect better what the mod does when days equal 0.
+
+v2.0.1 - January 6th, 2017
+o Fixed database query involving invalid field for this mod.
+
 v2.0 - January 5th, 2017
 o Converted mod to 100% hook-based, removing all file edits!
 o Completely rewrote unanswered topics function to use built-in list functionality.

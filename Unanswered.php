@@ -23,6 +23,7 @@ function UnansweredTopics()
 	$context['delete_own'] = $context['delete_any'] = array();
 	$context['can_delete'] = false;
 	$context['unanswered_member'] = isset($_GET['u']) ? (int) $_GET['u'] : false;
+	$context['days'] = isset($modSettings['unanswered_time_limit']) ? $modSettings['unanswered_time_limit'] : 90;
 
 	// Are we removing the topic?
 	if (isset($_GET['save']) && isset($_POST['remove_submit']))
@@ -59,7 +60,7 @@ function UnansweredTopics()
 		'base_href' => $scripturl . '?action=unanswered',
 		'default_sort_col' => 'lastpost',
 		'default_sort_dir' => 'desc',
-		'no_items_label' => sprintf($txt['unanswered_topics_visit_none'], $modSettings['unanswered_time_limit']),
+		'no_items_label' => !empty($context['days']) ? sprintf($txt['unanswered_topics_visit_none'], $context['days']) : $txt['unanswered_topics_visit_unlimited'],
 		'get_items' => array(
 			'function' => 'UTM_Get_Topics',
 		),
@@ -168,7 +169,7 @@ function UTM_Topics_Count()
 	global $smcFunc, $modSettings, $context;
 
 	$request = $smcFunc['db_query']('', '
-		SELECT COUNT(t.important) AS count
+		SELECT COUNT(t.id_topic) AS count
 		FROM {db_prefix}topics AS t
 			LEFT JOIN {db_prefix}boards AS b ON (b.id_board = t.id_board)
 			LEFT JOIN {db_prefix}messages AS m ON (m.id_msg = t.id_first_msg)
@@ -176,12 +177,12 @@ function UTM_Topics_Count()
 			AND b.id_board != {int:recycle_board}' : '') . (!empty($context['unanswered_member']) ? '
 			AND m.id_member = {int:id_member}' : '') . '
 			AND t.id_first_msg = t.id_last_msg
-			AND t.locked = {int:not_locked}
-			AND m.poster_time > {int:time_limit}',
+			AND t.locked = {int:not_locked}' . (!empty($context['days']) ? '
+			AND m.poster_time > {int:time_limit}' : ''),
 		array(
 			'not_locked' => 0,
 			'id_member' => $context['unanswered_member'],
-			'time_limit' => time() - (isset($modSettings['unanswered_time_limit']) ? $modSettings['unanswered_time_limit'] : 90) * 86400,
+			'time_limit' => time() - $context['days'] * 86400,
 			'recycle_board' => $modSettings['recycle_board'],
 		)
 	);
@@ -210,8 +211,8 @@ function UTM_Get_Topics($start, $items_per_page, $sort)
 			AND b.id_board != {int:recycle_board}' : '') . (!empty($context['unanswered_member']) ? '
 			AND m.id_member = {int:id_member}' : '') . '
 			AND t.id_first_msg = t.id_last_msg
-			AND t.locked = {int:not_locked}
-			AND m.poster_time > {int:time_limit}
+			AND t.locked = {int:not_locked}' . (!empty($context['days']) ? '
+			AND m.poster_time > {int:time_limit}' : '') . '
 		ORDER BY {raw:sort}
 		LIMIT {int:start}, {int:per_page}',
 		array(
@@ -220,7 +221,7 @@ function UTM_Get_Topics($start, $items_per_page, $sort)
 			'start' => $start,
 			'per_page' => $items_per_page,
 			'not_locked' => 0,
-			'time_limit' => time() - (isset($modSettings['unanswered_time_limit']) ? $modSettings['unanswered_time_limit'] : 90) * 86400,
+			'time_limit' => time() - $context['days'] * 86400,
 			'recycle_board' => $modSettings['recycle_board'],
 			'id_member' => $context['unanswered_member'],
 		)

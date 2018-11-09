@@ -22,7 +22,6 @@ function UTM_Actions(&$actions)
 function UTM_Settings(&$settings)
 {
 	global $txt;
-	$settings[] = array('select', 'unanswered_default_view', array($txt['unanswered_view_posts'], $txt['unanswered_view_topics']));
 	$settings[] = array('int', 'unanswered_time_limit', 'postinput' => $txt['days_word']);
 }
 
@@ -35,12 +34,12 @@ function UTM_Buffer($buffer)
 	if (substr($forum_version, 0, 7) == 'SMF 2.1')
 	{
 		$search = '<a href="' . $scripturl . '?action=unreadreplies" title="' . $txt['show_unread_replies'] . '">' . $txt['unread_replies'] . '</a>';
-		$insert = '<a href="' . $scripturl . '?action=unanswered' . (empty($modSettings['unanswered_default_view']) ? '' : ';topics') . '" title="' . $txt['unanswered_topics'] . '">' . $txt['unanswered_topics'] . '</a>';
+		$insert = '<a href="' . $scripturl . '?action=unanswered" title="' . $txt['unanswered_topics'] . '">' . $txt['unanswered_topics'] . '</a>';
 	}
 	else
 	{
 		$search = '<li><a href="' . $scripturl . '?action=unreadreplies">' . $txt['show_unread_replies'] . '</a></li>';
-		$insert = '<li><a href="' . $scripturl . '?action=unanswered' . (empty($modSettings['unanswered_default_view']) ? '' : ';topics') . '">' . (!empty($modSettings['unanswered_time_limit']) ? sprintf($txt['show_unanswered_topics_limit'], $modSettings['unanswered_time_limit']) : $txt['show_unanswered_topics']) . '</a></li>';
+		$insert = '<li><a href="' . $scripturl . '?action=unanswered">' . (!empty($modSettings['unanswered_time_limit']) ? sprintf($txt['show_unanswered_topics_limit'], $modSettings['unanswered_time_limit']) : $txt['show_unanswered_topics']) . '</a></li>';
 	}
 	return str_replace($search, $search . $insert, $buffer);
 }

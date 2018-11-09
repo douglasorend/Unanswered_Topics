@@ -15,9 +15,9 @@ $txt['show_unanswered_topics_limit'] = 'Son %d gündeki cevapsiz konulari göster.
 $txt['unanswered_topics_visit_none'] = 'Son %d gün içinde cevaplanmamis son konular.';
 $txt['unanswered_view_topics'] = 'Konu listesi seklinde';
 $txt['unanswered_view_posts'] = 'Konu içerigi seklinde';
-$txt['unanswered_time_limit'] = 'Son kaç gündeki konular görüntülensin:<div class="smalltext">(0 kapatir)<>';
 $txt['unanswered_default_view'] = 'Cevapsiz konular için varsayilan görünüm:';
 //$txt['unanswered_remove_topics'] = 'Remove selected topics?';
-//$txt['unanswered_unread_topics'] = 'Mark selected topics as read?';
+//$txt['unanswered_topics_visit_unlimited'] = 'No unanswered topics found.';
+//$txt['unanswered_time_limit'] = 'Number of days to show unanswered topics:<div class="smalltext">(0 for unlimited time)</div>';
 
 ?>
