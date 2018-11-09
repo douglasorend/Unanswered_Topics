@@ -19,5 +19,6 @@ $txt['unanswered_default_view'] = 'Vista predeterminada de temas sin respuesta:'
 //$txt['unanswered_remove_topics'] = 'Remove selected topics?';
 //$txt['unanswered_topics_visit_unlimited'] = 'No unanswered topics found.';
 //$txt['unanswered_time_limit'] = 'Number of days to show unanswered topics:<div class="smalltext">(0 for unlimited time)</div>';
+//$txt['permissionname_view_unanswered'] = 'Can view unanswered topics';
 
 ?>

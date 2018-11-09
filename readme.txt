@@ -1,5 +1,5 @@
 [hr]
-[center][color=red][size=16pt][b]UNANSWERED TOPICS v2.3[/b][/size][/color]
+[center][color=red][size=16pt][b]UNANSWERED TOPICS v2.4[/b][/size][/color]
 [url=http://www.simplemachines.org/community/index.php?action=profile;u=253913][b]By Dougiefresh[/b][/url] -> [url=http://custom.simplemachines.org/mods/index.php?mod=4088]Link to Mod[/url]
 [/center]
 [hr]
@@ -11,6 +11,9 @@ This mod shows all of the topics, excluding locked topics and recycle board topi
 There are two new settings under [b]Admin[/b] -> [b]Configuration[/b] -> [b]Modification Settings[/b]:
 o Default view for unanswered topics (set to posts view by default)
 o Number of days to show unanswered topics (set to 90 days by default)
+
+There is also a new permission under [b]Admin[/b] -> [b]Members[/b] -> [b]Permissions[/b]:
+o Can view unanswered topics (not permissable for guests)
 
 [color=blue][b][size=12pt][u]Compatibility Notes[/u][/size][/b][/color]
 This mod was tested on SMF 2.0.13 and SMF 2.1 Beta 2, but should work on SMF 2.0 and up.  SMF 1.x is not and will not be supported.

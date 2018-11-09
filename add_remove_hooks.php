@@ -24,6 +24,7 @@ db_extend('packages');
 $hook_functions = array(
 // BBCode stuff:
 	'integrate_pre_include' => '$sourcedir/Subs-Unanswered.php',
+	'integrate_load_permissions' => 'UTM_permissions',
 	'integrate_pre_load' => 'UTM_Load',
 	'integrate_actions' => 'UTM_Actions',
 	'integrate_buffer' => 'UTM_Buffer',

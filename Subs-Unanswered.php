@@ -19,6 +19,13 @@ function UTM_Actions(&$actions)
 	$actions['unanswered'] = array('Unanswered.php', 'UnansweredTopics');
 }
 
+function UTM_permissions(&$permissionGroups, &$permissionList, &$leftPermissionGroups, &$hiddenPermissions, &$relabelPermissions)
+{
+	global $context;
+	$permissionList['membergroup']['view_unanswered'] = array(false, 'general', 'moderate_general');
+	$context['non_guest_permissions'][] = 'view_unanswered';
+}
+
 function UTM_Settings(&$settings)
 {
 	global $txt;
@@ -29,7 +36,7 @@ function UTM_Buffer($buffer)
 {
 	global $scripturl, $modSettings, $txt, $forum_version, $user_info;
 	
-	if (!$user_info['id'])
+	if (!allowedTo('view_unanswered'))
 		return $buffer;
 	if (substr($forum_version, 0, 7) == 'SMF 2.1')
 	{
