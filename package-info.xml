@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "http://www.simplemachines.org/xml/package-info">
+
+<package-info xmlns="http://www.simplemachines.org/xml/package-info" xmlns:smf="http://www.simplemachines.org/">
+	<id>Dougiefresh:UnansweredTopics</id>
+	<name>Unanswered Topics</name>
+	<type>modification</type>
+	<version>1.0</version>
+
+	<install for="2.0 - 2.0.99, 2.1 Beta 2">
+		<readme parsebbc="true">readme.txt</readme>
+		<modification>install_20x.xml</modification>
+		<modification>language_english.xml</modification>
+		<require-file name="Unanswered.php" destination="$sourcedir" />
+		<require-file name="Unanswered.template.php" destination="$themedir" />
+	</install>
+	<uninstall for="2.0 - 2.0.99, 2.1 Beta 2">
+		<modification reverse="true">install_20x.xml</modification>
+		<modification reverse="true">language_english.xml</modification>
+		<remove-file name="$sourcedir/Unanswered.php" />		
+		<remove-file name="$themedir/Unanswered.template.php" />		
+	</uninstall>
+</package-info>
