@@ -24,6 +24,7 @@ function UnansweredTopics()
 	$context['can_delete'] = false;
 	$context['unanswered_member'] = isset($_GET['u']) ? (int) $_GET['u'] : false;
 	$context['days'] = isset($modSettings['unanswered_time_limit']) ? $modSettings['unanswered_time_limit'] : 90;
+	$context['UAT_boards'] = isset($_GET['board']) ? explode(',', $_GET['board']) : array();
 
 	// Are we removing the topic?
 	if (isset($_GET['save']) && isset($_POST['remove_submit']))
@@ -178,12 +179,14 @@ function UTM_Topics_Count()
 			AND m.id_member = {int:id_member}' : '') . '
 			AND t.id_first_msg = t.id_last_msg
 			AND t.locked = {int:not_locked}' . (!empty($context['days']) ? '
-			AND m.poster_time > {int:time_limit}' : ''),
+			AND m.poster_time > {int:time_limit}' : '') . (!empty($context['UAT_boards']) ? '
+			AND b.id_board IN ({array_int:boards})' : ''),
 		array(
 			'not_locked' => 0,
 			'id_member' => $context['unanswered_member'],
 			'time_limit' => time() - $context['days'] * 86400,
 			'recycle_board' => $modSettings['recycle_board'],
+			'boards' => $context['UAT_boards'],
 		)
 	);
 	list($count) = $smcFunc['db_fetch_row']($request);
@@ -212,7 +215,8 @@ function UTM_Get_Topics($start, $items_per_page, $sort)
 			AND m.id_member = {int:id_member}' : '') . '
 			AND t.id_first_msg = t.id_last_msg
 			AND t.locked = {int:not_locked}' . (!empty($context['days']) ? '
-			AND m.poster_time > {int:time_limit}' : '') . '
+			AND m.poster_time > {int:time_limit}' : '') . (!empty($context['UAT_boards']) ? '
+			AND b.id_board IN ({array_int:boards})' : '') . '
 		ORDER BY {raw:sort}
 		LIMIT {int:start}, {int:per_page}',
 		array(
@@ -224,6 +228,7 @@ function UTM_Get_Topics($start, $items_per_page, $sort)
 			'time_limit' => time() - $context['days'] * 86400,
 			'recycle_board' => $modSettings['recycle_board'],
 			'id_member' => $context['unanswered_member'],
+			'boards' => $context['UAT_boards'],
 		)
 	);
 	$topics = array();
