@@ -28,7 +28,7 @@ function template_main()
 		<div class="pagesection">';
 			template_button_strip($mark_read, 'right');
 	echo '
-			<span>', $txt['pages'], ': ', $context['page_index'], '</span>
+			<span>', $txt['pages'] . ': ', $context['page_index'], '</span>
 		</div>';
 
 	
@@ -84,7 +84,7 @@ function template_main()
 
 	echo '
 		<div class="pagesection">
-			<span>', $txt['pages'], ': ', $context['page_index'], '</span>
+			<span>', $txt['pages'] . ': ', $context['page_index'], '</span>
 		</div>
 	</div>';
 }
@@ -132,7 +132,7 @@ function template_unread()
 			template_button_strip($mark_read, 'right');
 
 		echo '
-				<span>', $txt['pages'], ': ', $context['page_index'], '</span>
+				<span>', $txt['pages'] . ': ', $context['page_index'], '</span>
 			</div>';
 
 		echo '
@@ -256,23 +256,6 @@ function template_unread()
 	if ($showCheckboxes)
 		echo '
 		</form>';
-
-	echo '
-		<div class="description " id="topic_icons">
-			<p class="smalltext floatleft">
-				', !empty($modSettings['enableParticipation']) ? '
-				<img src="' . $settings['images_url'] . '/topic/my_normal_post.gif" alt="" align="middle" /> ' . $txt['participation_caption'] . '<br />' : '', '
-				<img src="', $settings['images_url'], '/topic/normal_post.gif" alt="" align="middle" /> ', $txt['normal_topic'], '<br />
-				<img src="', $settings['images_url'], '/topic/hot_post.gif" alt="" align="middle" /> ', sprintf($txt['hot_topics'], $modSettings['hotTopicPosts']), '<br />
-				<img src="', $settings['images_url'], '/topic/veryhot_post.gif" alt="" align="middle" /> ', sprintf($txt['very_hot_topics'], $modSettings['hotTopicVeryPosts']), '
-			</p>
-			<p class="smalltext para2">
-				<img src="', $settings['images_url'], '/icons/quick_lock.gif" alt="" align="middle" /> ', $txt['locked_topic'], '<br />', ($modSettings['enableStickyTopics'] == '1' ? '
-				<img src="' . $settings['images_url'] . '/icons/quick_sticky.gif" alt="" align="middle" /> ' . $txt['sticky_topic'] . '<br />' : ''), ($modSettings['pollMode'] == '1' ? '
-				<img src="' . $settings['images_url'] . '/topic/normal_poll.gif" alt="" align="middle" /> ' . $txt['poll'] : ''), '
-			</p>
-		</div>
-	</div>';
 }
 
 function template_replies()
@@ -387,7 +370,7 @@ function template_replies()
 								', $post['views'], ' ', $txt['views'], '
 							</td>
 							<td class="', $color_class2, ' lastpost windowbg2">
-								<a href="', $post['href'], '"><img src="', $settings['images_url'], '/icons/last_post.gif" alt="', $txt, '" title="', $txt, '" style="float: right;" /></a>
+								<a href="', $post['href'], '"><img src="', $settings['images_url'], '/icons/last_post.gif" alt="" title="" style="float: right;" /></a>
 								', $post['time'], '<br />
 								', $txt['by'], ' ', $post['link'], '
 							</td>';
@@ -433,23 +416,6 @@ function template_replies()
 	if ($showCheckboxes)
 		echo '
 		</form>';
-
-	echo '
-		<div class="description flow_auto" id="topic_icons">
-			<p class="smalltext floatleft">
-				', !empty($modSettings['enableParticipation']) ? '
-				<img src="' . $settings['images_url'] . '/topic/my_normal_post.gif" alt="" align="middle" /> ' . $txt['participation_caption'] . '<br />' : '', '
-				<img src="', $settings['images_url'], '/topic/normal_post.gif" alt="" align="middle" /> ', $txt['normal_topic'], '<br />
-				<img src="', $settings['images_url'], '/topic/hot_post.gif" alt="" align="middle" /> ', sprintf($txt['hot_topics'], $modSettings['hotTopicPosts']), '<br />
-				<img src="', $settings['images_url'], '/topic/veryhot_post.gif" alt="" align="middle" /> ', sprintf($txt['very_hot_topics'], $modSettings['hotTopicVeryPosts']), '
-			</p>
-			<p class="smalltext para2">
-				<img src="', $settings['images_url'], '/icons/quick_lock.gif" alt="" align="middle" /> ', $txt['locked_topic'], '<br />', ($modSettings['enableStickyTopics'] == '1' ? '
-				<img src="' . $settings['images_url'] . '/icons/quick_sticky.gif" alt="" align="middle" /> ' . $txt['sticky_topic'] . '<br />' : '') . ($modSettings['pollMode'] == '1' ? '
-				<img src="' . $settings['images_url'] . '/topic/normal_poll.gif" alt="" align="middle" /> ' . $txt['poll'] : '') . '
-			</p>
-		</div>
-	</div>';
 }
 
 ?>

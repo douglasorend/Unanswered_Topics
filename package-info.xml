@@ -5,20 +5,39 @@
 	<id>Dougiefresh:UnansweredTopics</id>
 	<name>Unanswered Topics</name>
 	<type>modification</type>
-	<version>1.1</version>
+	<version>1.2</version>
 
 	<install for="2.0 - 2.0.99">
 		<readme parsebbc="true">readme.txt</readme>
 		<code>settings_install.php</code>
 		<modification>install_20x.xml</modification>
 		<modification>language_english.xml</modification>
+		<modification>language_turkish.xml</modification>
 		<require-file name="Unanswered.php" destination="$sourcedir" />
-		<require-file name="Unanswered.template.php" destination="$themedir" />
+		<require-file name="Unanswered20.template.php" destination="$themedir" />
 	</install>
 	<uninstall for="2.0 - 2.0.99">
 		<modification reverse="true">install_20x.xml</modification>
 		<modification reverse="true">language_english.xml</modification>
+		<modification reverse="true">language_turkish.xml</modification>
 		<remove-file name="$sourcedir/Unanswered.php" />
-		<remove-file name="$themedir/Unanswered.template.php" />
+		<remove-file name="$themedir/Unanswered20.template.php" />
+	</uninstall>
+
+	<install for="2.1 Beta 2">
+		<readme parsebbc="true">readme.txt</readme>
+		<code>settings_install.php</code>
+		<modification>install_21x.xml</modification>
+		<modification>language_english.xml</modification>
+		<modification>language_turkish.xml</modification>
+		<require-file name="Unanswered.php" destination="$sourcedir" />
+		<require-file name="Unanswered21.template.php" destination="$themedir" />
+	</install>
+	<uninstall for="2.1 Beta 2">
+		<modification reverse="true">install_21x.xml</modification>
+		<modification reverse="true">language_english.xml</modification>
+		<modification reverse="true">language_turkish.xml</modification>
+		<remove-file name="$sourcedir/Unanswered.php" />
+		<remove-file name="$themedir/Unanswered21.template.php" />
 	</uninstall>
 </package-info>

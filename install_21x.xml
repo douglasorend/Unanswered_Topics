@@ -7,7 +7,7 @@
 
 <file name="$boarddir/index.php">
 	<operation>
-		<search position="before"><![CDATA['about:unknown' => array('Karma.php', 'BookOfUnknown'),]]></search>
+		<search position="before"><![CDATA['about:unknown' => array('Likes.php', 'BookOfUnknown'),]]></search>
 		<add><![CDATA[
 		'unanswered' => array('Unanswered.php', 'UnansweredTopics'),]]></add>
 	</operation>
@@ -22,9 +22,9 @@
 </file>
 <file name="$themedir/index.template.php">
 	<operation>
-		<search position="before"><![CDATA[<li><a href="', $scripturl, '?action=unreadreplies">', $txt['show_unread_replies'], '</a></li>]]></search>
+		<search position="before"><![CDATA[<a href="', $scripturl, '?action=unreadreplies" title="', $txt['show_unread_replies'], '">', $txt['unread_replies'], '</a>]]></search>
 		<add><![CDATA[
-					<li><a href="', $scripturl, '?action=unanswered', (empty($modSettings['unanswered_default_view']) ? '' : ';topics'), '">', !empty($modSettings['unanswered_time_limit']) ? sprintf($txt['show_unanswered_topics_limit'], $modSettings['unanswered_time_limit']) : $txt['show_unanswered_topics'], '</a></li>]]></add>
+							<a href="', $scripturl, '?action=unanswered', (empty($modSettings['unanswered_default_view']) ? '' : ';topics'), '" title="', $txt['unanswered_topics'], '">', $txt['unanswered_topics'], '</a></li>]]></add>
 	</operation>
 </file>
 </modification>

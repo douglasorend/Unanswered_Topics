@@ -17,7 +17,7 @@ if (!defined('SMF'))
 **********************************************************************************/
 function UnansweredTopics()
 {
-	global $txt, $scripturl, $user_info, $context, $modSettings, $sourcedir, $smcFunc, $settings;
+	global $txt, $scripturl, $user_info, $context, $modSettings, $sourcedir, $smcFunc, $settings, $forum_version;
 		
 	// What's the limit for showing posts?
 	$daysToGet = !empty($modSettings['unanswered_time_limit']) ? $modSettings['unanswered_time_limit'] : 0;
@@ -32,6 +32,15 @@ function UnansweredTopics()
 		
 	if (isset($_GET['topics']))
 	{
+		$sort_methods = array(
+			'subject' => 'm.subject',
+			'starter' => 'IFNULL(mem.real_name, ms.poster_name)',
+			'replies' => 't.num_replies',
+			'views' => 't.num_views',
+			'first_post' => 't.id_topic',
+			'last_post' => 't.id_last_msg'
+		);
+
 		// The default is the most logical: newest first.
 		if (!isset($_REQUEST['sort']) || !isset($sort_methods[$_REQUEST['sort']]))
 		{
@@ -201,7 +210,8 @@ function UnansweredTopics()
 	$smcFunc['db_free_result']($request);
 
 	// Now, the page index... thing! :)
-	loadTemplate('Unanswered');
+	$context['UAT_smf21'] = $smf21 = (substr($forum_version, 0, 7) == 'SMF 2.1');
+	loadTemplate('Unanswered' . ($smf21 ? '21' : '20'));
 	$context['page_title'] = $txt['recent_posts'] = $txt['unanswered_topics'];
 	$context['page_index'] = constructPageIndex($scripturl . '?action=unanswered' . $context['querystring_board_limits'], $_REQUEST['start'], min(100, $total_messages), 10);
 
@@ -234,7 +244,7 @@ function UnansweredTopics()
 			AND t.locked = 0
 			AND t.num_replies = 0' . (!empty($startTime) ? '
 			AND m.poster_time > {int:time_limit}' : '') . '
-		ORDER BY m.id_msg DESC
+		ORDER BY {raw:sort}
 		LIMIT {int:offset}, {int:limit}',
 		array(
 			'current_member' => $user_info['id'],
@@ -242,6 +252,7 @@ function UnansweredTopics()
 			'time_limit' => $startTime,
 			'offset' => $_REQUEST['start'],
 			'limit' => 10,
+			'sort' => !isset($_GET['topics']) ? 'm.id_msg DESC' : $_REQUEST['sort'] . ($ascending ? '' : ' DESC'),
 		)
 	);
 	$counter = $_REQUEST['start'] + 1;
@@ -290,6 +301,7 @@ function UnansweredTopics()
 			'icon' => $row['icon'],
 			'is_posted_in' => $row['id_first_member'] == $user_info['id'],
 			'delete_possible' => ($row['id_first_msg'] != $row['id_msg'] || $row['id_last_msg'] ==  $row['id_msg']) && (empty($modSettings['edit_disable_time']) || $row['poster_time'] + $modSettings['edit_disable_time'] * 60 >= time()),
+			'css_class' => 'windowbg',
 		);
 
 		// Add some stuff for topic list of unanswered topics:
@@ -319,7 +331,17 @@ function UnansweredTopics()
 					$context['icon_sources'][$row['icon']] = file_exists($settings['theme_dir'] . '/images/post/' . $row['icon'] . '.gif') ? 'images_url' : 'default_images_url';
 			}
 
-			determineTopicClass($context['posts'][$row['id_msg']]);
+			if ($smf21)
+			{
+				$context['posts'][$row['id_msg']]['css_class'] = 'windowbg' . ($row['is_sticky'] ? ' sticky' : '');
+				$row['body'] = strip_tags(strtr(parse_bbc($row['body'], $row['smileys_enabled'], $row['id_msg']), array('<br>' => '&#10;')));
+				if ($smcFunc['strlen']($row['body']) > 128)
+					$row['body'] = $smcFunc['substr']($row['body'], 0, 128) . '...';
+				$context['posts'][$row['id_msg']]['preview'] = $row['body'];
+				$context['posts'][$row['id_msg']]['started_by'] = sprintf($txt['topic_started_by'], $context['posts'][$row['id_msg']]['poster']['link'], $context['posts'][$row['id_msg']]['board']['link']);
+			}
+			else
+				determineTopicClass($context['posts'][$row['id_msg']]);
 		}
 		else
 		{

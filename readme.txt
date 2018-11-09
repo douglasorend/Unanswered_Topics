@@ -1,5 +1,5 @@
 [hr]
-[center][color=red][size=16pt][b]UNANSWERED TOPICS v1.1[/b][/size][/color]
+[center][color=red][size=16pt][b]UNANSWERED TOPICS v1.2[/b][/size][/color]
 [url=http://www.simplemachines.org/community/index.php?action=profile;u=253913][b]By Dougiefresh[/b][/url] -> [url=http://custom.simplemachines.org/mods/index.php?mod=4088]Link to Mod[/url]
 [/center]
 [hr]
@@ -16,7 +16,7 @@ o Number of days to show unanswered topics (set to 90 days by default)
 Most of the [url=http://www.simplemachines.org/community/index.php?topic=510124.msg3601208#msg3601208]code contained within this mod[/url] was written by the combined effort of [url=http://www.simplemachines.org/community/index.php?action=profile;u=41895]margarett[/url], [url=http://www.simplemachines.org/community/index.php?action=profile;u=378334]Phphelp[/url] and [url=http://www.simplemachines.org/community/index.php?action=profile;u=318771]Arantor[/url].....
 
 [color=blue][b][size=12pt][u]Compatibility Notes[/u][/size][/b][/color]
-This mod was tested on SMF 2.0.11, but should work on SMF 2.0 and up.  SMF 1.x is not and will not be supported.  
+This mod was tested on SMF 2.0.11 and SMF 2.1 Beta 2, but should work on SMF 2.0 and up.  SMF 1.x is not and will not be supported.  
 
 [color=blue][b][size=12pt][u]Related Discussions[/u][/size][/b][/color]
 o [url=http://www.simplemachines.org/community/index.php?topic=510124.0[/url]Un-answeredTopics for SMF 2.0?[/url]

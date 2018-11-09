@@ -1,3 +1,8 @@
+v1.2 - March 7th, 2016
+o Added Turkish language support to the mod, thanks to Snrj!
+o Added SMF 2.1 Beta 2 support to the mod.
+o Moved 2 language strings from [b]index[/b] to [b]ManageSettings[/b] language file.
+
 v1.1 - February 29th, 2016
 o Added option to set number of days for unanswered topics under [b]Modification Settings[/b].
 o Added option to set default view of the unanswered topics (topic or post).
