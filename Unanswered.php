@@ -170,20 +170,19 @@ function UnansweredTopics()
 
 	// Everything is set. Let's run the "boards" array and compare the accessible membergroups with our owns.
 	// if they match, then the board is ok to be accessed by us :)
-	foreach ($boards as &$temp)
+	foreach ($boards as $i => $temp)
 	{
 		// we need to intersect 2 arrays, so the board membergroups ought to be an array...
 		// if we are admin, OF COURSE we can access...
 		$board_groups_array = explode(',', $temp['groups']);
 		if ($context['user']['is_admin'] || (count(array_intersect($user_membergroups_array, $board_groups_array)) > 0))
-			$temp['access'] = true;
+			$boards[$i]['access'] = true;
 		
 	}
-	unset($temp);
 	
 	// Count the total number of messages we can actually access:
 	$boards_to_access = array();
-	foreach ($boards as &$temp)
+	foreach ($boards as $temp)
 	{
 		if ($temp['access'])
 			$boards_to_access[] = $temp['id'];

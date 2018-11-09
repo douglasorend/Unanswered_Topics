@@ -41,7 +41,7 @@ function template_main()
 					<div class="counter">', $post['counter'], '</div>
 					<div class="topic_details">
 						<h5>', $post['board']['link'], ' / ', $post['link'], '</h5>
-						<span class="smalltext">&#171;&nbsp;', $txt, ' ', $txt['by'], ' <strong>', $post['poster']['link'], ' </strong> ', $txt['on'], '<em> ', $post['time'], '</em>&nbsp;&#187;</span>
+						<span class="smalltext">&#171;&nbsp;', $txt['last_post'], ' ', $txt['by'], ' <strong>', $post['poster']['link'], ' </strong> ', $txt['on'], '<em> ', $post['time'], '</em>&nbsp;&#187;</span>
 					</div>
 					<div class="list_posts">', $post['message'], '</div>
 				</div>';
@@ -160,7 +160,7 @@ function template_unread()
 		else
 			echo '
 							<th scope="col" class="smalltext last_th" width="22%">
-								<a href="', $scripturl, '?action=unread', $context['showing_all_topics'] ? ';all' : '', $context['querystring_board_limits'], ';sort=last_post', $context['sort_by'] == 'last_post' && $context['sort_direction'] == 'up' ? ';desc' : '', '">', $txt, $context['sort_by'] == 'last_post' ? ' <img src="' . $settings['images_url'] . '/sort_' . $context['sort_direction'] . '.gif" alt="" />' : '', '</a>
+								<a href="', $scripturl, '?action=unread', $context['showing_all_topics'] ? ';all' : '', $context['querystring_board_limits'], ';sort=last_post', $context['sort_by'] == 'last_post' && $context['sort_direction'] == 'up' ? ';desc' : '', '">', $txt['last_post'], $context['sort_by'] == 'last_post' ? ' <img src="' . $settings['images_url'] . '/sort_' . $context['sort_direction'] . '.gif" alt="" />' : '', '</a>
 							</th>';
 		echo '
 						</tr>
@@ -203,7 +203,7 @@ function template_unread()
 								', $post['views'], ' ', $txt['views'], '
 							</td>
 							<td class="', $color_class2, ' lastpost windowbg2">
-								<a href="', $post['href'], '"><img src="', $settings['images_url'], '/icons/last_post.gif" alt="', $txt, '" title="', $txt, '" style="float: right;" /></a>
+								<a href="', $post['href'], '"><img src="', $settings['images_url'], '/icons/last_post.gif" alt="', $txt['last_post'], '" title="', $txt, '" style="float: right;" /></a>
 								', $post['time'], '<br />
 								', $txt['by'], ' ', $post['poster']['link'], '
 							</td>';

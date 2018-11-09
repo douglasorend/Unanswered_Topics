@@ -1,3 +1,8 @@
+v1.3 - March 19th, 2016
+o Fixed "Array to string conversion" error found by [url=http://www.simplemachines.org/community/index.php?action=profile;u=423124]roza[/url].
+o Fixed array processing issue found by [url=http://www.simplemachines.org/community/index.php?action=profile;u=189089]Inti31[/url].
+o Added German translation by [url=http://www.simplemachines.org/community/index.php?action=profile;u=189089]Inti31[/url].
+
 v1.2 - March 7th, 2016
 o Added Turkish language support to the mod, thanks to Snrj!
 o Added SMF 2.1 Beta 2 support to the mod.

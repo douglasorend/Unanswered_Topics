@@ -5,7 +5,7 @@
 	<id>Dougiefresh:UnansweredTopics</id>
 	<name>Unanswered Topics</name>
 	<type>modification</type>
-	<version>1.2</version>
+	<version>1.3</version>
 
 	<install for="2.0 - 2.0.99">
 		<readme parsebbc="true">readme.txt</readme>
@@ -13,6 +13,7 @@
 		<modification>install_20x.xml</modification>
 		<modification>language_english.xml</modification>
 		<modification>language_turkish.xml</modification>
+		<modification>language_german.xml</modification>
 		<require-file name="Unanswered.php" destination="$sourcedir" />
 		<require-file name="Unanswered20.template.php" destination="$themedir" />
 	</install>
@@ -20,6 +21,7 @@
 		<modification reverse="true">install_20x.xml</modification>
 		<modification reverse="true">language_english.xml</modification>
 		<modification reverse="true">language_turkish.xml</modification>
+		<modification reverse="true">language_german.xml</modification>
 		<remove-file name="$sourcedir/Unanswered.php" />
 		<remove-file name="$themedir/Unanswered20.template.php" />
 	</uninstall>
@@ -30,6 +32,7 @@
 		<modification>install_21x.xml</modification>
 		<modification>language_english.xml</modification>
 		<modification>language_turkish.xml</modification>
+		<modification>language_german.xml</modification>
 		<require-file name="Unanswered.php" destination="$sourcedir" />
 		<require-file name="Unanswered21.template.php" destination="$themedir" />
 	</install>
@@ -37,6 +40,7 @@
 		<modification reverse="true">install_21x.xml</modification>
 		<modification reverse="true">language_english.xml</modification>
 		<modification reverse="true">language_turkish.xml</modification>
+		<modification reverse="true">language_german.xml</modification>
 		<remove-file name="$sourcedir/Unanswered.php" />
 		<remove-file name="$themedir/Unanswered21.template.php" />
 	</uninstall>
