@@ -198,8 +198,8 @@ function UTM_Get_Topics($start, $items_per_page, $sort)
 	$request = $smcFunc['db_query']('', '
 		SELECT
 			t.id_topic, t.num_replies, t.num_views, t.id_first_msg, m.id_msg_modified,
-			' . ($user_info['is_guest'] ? '0' : 'IFNULL(lt.id_msg, IFNULL(lmr.id_msg, -1)) + 1') . ' AS new_from,
-			m.id_member, IFNULL(mem.real_name, m.poster_name) AS poster, m.icon,
+			' . ($user_info['is_guest'] ? '0' : 'COALESCE(lt.id_msg, COALESCE(lmr.id_msg, -1)) + 1') . ' AS new_from,
+			m.id_member, COALESCE(mem.real_name, m.poster_name) AS poster, m.icon,
 			m.subject AS subject, m.poster_time AS posted, b.id_board, b.name AS board_name
 		FROM {db_prefix}topics AS t
 			INNER JOIN {db_prefix}boards AS b ON (b.id_board = t.id_board)
