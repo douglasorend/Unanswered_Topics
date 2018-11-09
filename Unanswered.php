@@ -212,11 +212,12 @@ function UnansweredTopics()
 	$context['UAT_smf21'] = $smf21 = (substr($forum_version, 0, 7) == 'SMF 2.1');
 	loadTemplate('Unanswered' . ($smf21 ? '21' : '20'));
 	$context['page_title'] = $txt['recent_posts'] = $txt['unanswered_topics'];
-	$context['page_index'] = constructPageIndex($scripturl . '?action=unanswered' . $context['querystring_board_limits'], $_REQUEST['start'], min(100, $total_messages), 10);
+	$ua_link = $scripturl . '?action=unanswered' . (isset($_GET['topics']) ? ';topics' : '');
+	$context['page_index'] = constructPageIndex($ua_link . $context['querystring_board_limits'], $_REQUEST['start'], min(100, $total_messages), 10);
 
 	// Linktree
 	$context['linktree'][] = array(
-		'url' => $scripturl . '?action=unanswered',
+		'url' => $ua_link,
 		'name' => $context['page_title']
 	);
 

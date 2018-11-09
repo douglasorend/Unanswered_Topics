@@ -1,3 +1,6 @@
+v1.7 - October 1st, 2016
+o Fixed a bug where posts where displayed instead of topics on page 2 and up...  Thanks, [url=http://www.simplemachines.org/community/index.php?action=profile;u=413177]aegersz[/url]!
+
 v1.6 - September 30th, 2016
 o Fixed German language file so that it installs properly without errors.
 

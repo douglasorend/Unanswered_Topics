@@ -3,7 +3,7 @@
 <modification xmlns="http://www.simplemachines.org/xml/modification" xmlns:smf="http://www.simplemachines.org/">
 <id>Dougiefresh:UnansweredTopics</id>
 <name>Unanswered Topics</name>
-<version>1.6</version>
+<version>1.7</version>
 
 <file name="$boarddir/index.php">
 	<operation>
