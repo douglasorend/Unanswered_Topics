@@ -1,3 +1,7 @@
+v2.6 - November 9th, 2018
+o No functionality change.
+o Updated documentation to point to new website.
+
 v2.5 - August 6th, 2017
 o Added ability to narrow topic list by board ID.
 

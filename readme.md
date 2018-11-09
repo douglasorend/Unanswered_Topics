@@ -1,33 +1,39 @@
-[hr]
-[center][color=red][size=16pt][b]UNANSWERED TOPICS v2.6[/b][/size][/color]
-[url=http://www.simplemachines.org/community/index.php?action=profile;u=253913][b]By Dougiefresh[/b][/url] -> [url=http://custom.simplemachines.org/mods/index.php?mod=4088]Link to Mod[/url]
-[/center]
-[hr]
+-------
 
-[color=blue][b][size=12pt][u]Introduction[/u][/size][/b][/color]
+# UNANSWERED TOPICS v2.6
+
+[**By Dougiefresh**](http://www.simplemachines.org/community/index.php?action=profile;u=253913) -> [Link to Mod](http://custom.simplemachines.org/mods/index.php?mod=4088)
+
+-------
+
+## Introduction
 This mod shows all of the topics, excluding locked topics and recycle board topics, that have not been answered (aka topics that consist of a single post).  Locked topics and topics in the recycle boards are not included in the list because it makes no sense to include topics that can't be replied to....
 
-[b]Version 2.5[/b] adds the ability to restrict by board(s) by using [b]board=[x][/b], where [b][x][/b] is the board ID or IDs seperated by commas.
+**Version 2.5** adds the ability to restrict by board(s) by using **board=[x]**, where **[x]** is the board ID or IDs seperated by commas.
 
-[color=blue][b][size=12pt][u]Admin Settings[/u][/size][/b][/color]
-There are two new settings under [b]Admin[/b] -> [b]Configuration[/b] -> [b]Modification Settings[/b]:
-o Default view for unanswered topics (set to posts view by default)
-o Number of days to show unanswered topics (set to 90 days by default)
+## Admin Settings
+There are two new settings under **Admin** -> **Configuration** -> **Modification Settings**:
 
-There is also a new permission under [b]Admin[/b] -> [b]Members[/b] -> [b]Permissions[/b]:
-o Can view unanswered topics (not permissable for guests)
+- Default view for unanswered topics (set to posts view by default)
+- Number of days to show unanswered topics (set to 90 days by default)
 
-[color=blue][b][size=12pt][u]Compatibility Notes[/u][/size][/b][/color]
+There is also a new permission under **Admin** -> **Members** -> **Permissions**:
+
+- Can view unanswered topics (not permissable for guests)
+
+## Compatibility Notes
 This mod was tested on SMF 2.0.13 and SMF 2.1 Beta 2, but should work on SMF 2.0 and up.  SMF 1.x is not and will not be supported.
 
-[color=blue][b][size=12pt][u]Related Discussions[/u][/size][/b][/color]
-o [url=http://www.simplemachines.org/community/index.php?topic=510124.0[/url]Un-answeredTopics for SMF 2.0?[/url]
+## Related Discussions
 
-[color=blue][b][size=12pt][u]Changelog[/u][/size][/b][/color]
-The changelog can be viewed at [url=http://www.xptsp.com/board/free-modifications/unanswered-topics/?tab=1]XPtsp.com[/url].
+- [Un-answeredTopics for SMF 2.0?](http://www.simplemachines.org/community/index.php?topic=510124.0[/url)
 
-[color=blue][b][size=12pt][u]License[/u][/size][/b][/color]
+## Changelog
+The changelog can be viewed at [XPtsp.com](http://www.xptsp.com/board/free-modifications/unanswered-topics/?tab=1).
+
+## License
 Copyright (c) 2016 - 2018, Douglas Orend
+
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
