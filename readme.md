@@ -1,6 +1,6 @@
 -------
 
-# UNANSWERED TOPICS v2.6
+# UNANSWERED TOPICS v2.7
 
 [**By Dougiefresh**](http://www.simplemachines.org/community/index.php?action=profile;u=253913) -> [Link to Mod](http://custom.simplemachines.org/mods/index.php?mod=4088)
 
